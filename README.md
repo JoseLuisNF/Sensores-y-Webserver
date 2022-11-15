@@ -4,8 +4,11 @@
 Alumnos que realizaron el los sensores:
 
 Cuevas Martinez Adrian de Jesus 19211623
+
 Robledo Sanchez Damian 19211719
+
 Nunez Felipe Jose Luis 18212233
+
 
 ----
 
