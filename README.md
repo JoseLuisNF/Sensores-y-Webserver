@@ -120,4 +120,139 @@ https://www.loom.com/share/8f92b45556ac440a9995962bfaad7cb4
 
 ----
 
+KY-005 IR Emission y KY-022 IR Receiver
+
+import board
+import digitalio
+import time
+
+Pin = digitalio.DigitalInOut(board.GP0)
+Pin.direction = digitalio.Direction.OUTPUT
+Pin.value = True
+input()
+Pin.value = False
+
+https://www.loom.com/share/a91dda1aad3048b6a4300088e61d15e1
+
+----
+
+KY-008
+
+import board
+import digitalio
+import time
+
+Pin = digitalio.DigitalInOut(board.GP0)
+Pin.direction = digitalio.Direction.OUTPUT
+Pin.value = True
+input()
+Pin.value = False
+
+https://www.loom.com/share/162f8f143e504f8a98f6e72b8aa268d7
+
+----
+
+KY-028
+
+import board
+import digitalio
+import analogio
+import time
+
+PinD = digitalio.DigitalInOut(board.GP0)
+PinD.direction = digitalio.Direction.INPUT
+PinA = analogio.AnalogIn(board.GP27)
+while True:
+    time.sleep(0.5)
+    print("------")
+    print(PinA.value)
+
+https://www.loom.com/share/0a477f8ad1ba4e9a80f2f0cc97076915
+
+----
+
+KY=019
+
+import board
+import digitalio
+import analogio
+import time
+
+PinD = digitalio.DigitalInOut(board.GP0)
+PinD.direction = digitalio.Direction.OUTPUT
+while True:
+    time.sleep(1)
+    PinD.value = True;
+    time.sleep(1)
+    PinD.value = False;
+
+https://www.loom.com/share/362080a1ce9f4b4ab352824a632d867d
+
+----
+
+KY-020
+
+import board
+import digitalio
+import analogio
+import time
+
+PinD = digitalio.DigitalInOut(board.GP0)
+PinD.direction = digitalio.Direction.INPUT
+while True:
+    time.sleep(0.2)
+    print(PinD.value)
+
+
+https://www.loom.com/share/1c54c307e05e4aba858fe69a14df1659
+
+----
+
+KY-039
+
+import board
+import analogio
+import digitalio
+import time
+
+In = analogio.AnalogIn(board.GP27)
+LED = digitalio.DigitalInOut(board.LED)
+LED.direction = digitalio.Direction.OUTPUT
+
+while True:
+    LED.value = False
+    print(In.value)
+    if(In.value < 61500):
+        LED.value = True
+    time.sleep(0.2)
+   
+https://www.loom.com/share/2d56fcde425c4f6e93ebcb14f8f78a14
+
+----
+
+KY-033
+
+import board
+import analogio
+import digitalio
+import time
+
+In = analogio.AnalogIn(board.GP27)
+LED = digitalio.DigitalInOut(board.LED)
+LED.direction = digitalio.Direction.OUTPUT
+
+while True:
+    LED.value = False
+    print(In.value)
+    if(In.value < 61500):
+        LED.value = True
+    time.sleep(0.2)
+    
+https://www.loom.com/share/7297ce7f26a7454f998725b89b1a9815
+
+----
+
+
+
+
 
