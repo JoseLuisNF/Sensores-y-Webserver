@@ -255,6 +255,191 @@ https://www.loom.com/share/7297ce7f26a7454f998725b89b1a9815
 
 ----
 
+KY-032
+
+import board
+import analogio
+import digitalio
+import time
+
+In = digitalio.DigitalInOut(board.GP0)
+In.direction = digitalio.Direction.INPUT
+LED = digitalio.DigitalInOut(board.LED)
+LED.direction = digitalio.Direction.OUTPUT
+
+while True:
+    if(not In.value):
+        print("DETECTED")
+    time.sleep(0.1)
+
+https://www.loom.com/share/2fd31d0592ca4098b74b4181b2e5b89a 
+
+----
+
+KY-036 Touch
+
+import board
+import analogio
+import digitalio
+import time
+
+In = digitalio.DigitalInOut(board.GP0)
+In.direction = digitalio.Direction.INPUT
+LED = digitalio.DigitalInOut(board.LED)
+LED.direction = digitalio.Direction.OUTPUT
+
+while True:
+    print("--------------")
+    if(In.value):
+        print("DETECTED")
+    time.sleep(0.1)
+    
+https://www.loom.com/share/f2267e6e826a4001a0f12a27165817bb
+
+----
+
+KY-037 y KY-038
+
+import board
+import analogio
+from digitalio import *
+import time
+
+Mic = DigitalInOut(board.GP0)
+Mic.direction = Direction.INPUT
+
+while True:
+    print(Mic.value)
+    time.sleep(0.2)
+
+https://www.loom.com/share/81be724e8ab34279a6828dab70434a03
+
+----
+
+KY-018
+
+import board
+import analogio
+from analogio import *
+import time
+
+In = AnalogIn(board.GP27)
+
+while True:
+    print(In.value)
+    time.sleep(0.2)
+
+https://www.loom.com/share/90ebec22c068410caaf79ffd0693c797
+
+----
+
+KY-015
+
+import board
+import analogio
+from digitalio import *
+import time
+import adafruit_dht
+
+dhtDevice = adafruit_dht.DHT11(board.GP0)
+while True:
+    try:
+        # Print the values via the serial interface
+        temperature_c = dhtDevice.temperature
+        temperature_f = temperature_c * (9 / 5) + 32
+        humidity = dhtDevice.humidity
+        print("Temp: {:.1f} F / {:.1f} C    Humidity: {}% ".format(temperature_f, temperature_c, humidity))
+
+    except RuntimeError as error:
+        # Errors happen quite often, DHT's are hard to read, just move on
+        print(error.args[0])
+        time.sleep(2.0)
+        continue
+    except Exception as error:
+        dhtDevice.exit()
+        raise error
+
+    time.sleep(1)
+   
+https://www.loom.com/share/605cee06196a41188a15a29c2123d330
+
+----
+
+KY-035 Analog Hall
+
+from board import *
+from analogio import *
+import time
+
+In = AnalogIn(GP27)
+
+while True:
+    print(In.value)
+    time.sleep(0.2)
+
+https://www.loom.com/share/2945aa8ad9504298b9dd7ce9e4d223d8
+
+----
+
+KY-010 Light Blocking
+
+from board import *
+from digitalio import *
+import time
+
+In = DigitalInOut(GP0)
+In.direction = Direction.INPUT
+
+while True:
+    print(not In.value)
+    time.sleep(0.2)
+
+https://www.loom.com/share/0fe6bc6ae1f5425b81caa2a99afc59b1
+
+----
+
+KY-031
+
+from board import *
+from digitalio import *
+import time
+
+In = DigitalInOut(GP0)
+In.direction = Direction.INPUT
+
+while True:
+    print(not In.value)
+    time.sleep(0.2)
+
+https://www.loom.com/share/c8b78c2c15054353bd6782164ddc0cb9
+
+----
+
+KY-023
+
+import board
+import digitalio
+import analogio
+import time
+
+LED = digitalio.DigitalInOut(board.LED)
+LED.direction = digitalio.Direction.OUTPUT
+Dig = digitalio.DigitalInOut(board.GP0)
+Dig.direction = digitalio.Direction.INPUT
+
+DirX = analogio.AnalogIn(board.GP27)
+DirY = analogio.AnalogIn(board.GP26)
+
+while True:
+    print("Axis X: ",DirX.value)
+    print("Axis Y: ",DirY.value)
+    time.sleep(0.1)
+
+https://www.loom.com/share/01e97d5ac21b48eea6ea98b62d177642
+
+----
+
+
 
 
 
