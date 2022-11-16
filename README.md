@@ -439,8 +439,69 @@ https://www.loom.com/share/01e97d5ac21b48eea6ea98b62d177642
 
 ----
 
+KY-009
+
+import board
+from digitalio import *
+import time
+
+R = DigitalInOut(board.GP0)
+G = DigitalInOut(board.GP1)
+B = DigitalInOut(board.GP2)
+
+R.direction = Direction.OUTPUT
+G.direction = Direction.OUTPUT
+B.direction = Direction.OUTPUT
 
 
+while True:
+    R.value = True
+    time.sleep(1)
+    R.value = False
+    G.value = True
+    time.sleep(1)
+    G.value = False
+    B.value = True
+    time.sleep(1)
+    B.value = False
+
+https://www.loom.com/share/24bea01c3748488d9c0e492e3d3bc6e3
+
+----
+
+KY-016
+
+import board
+from digitalio import *
+import time
+
+Signal = DigitalInOut(board.GP0)
+Signal.direction = Direction.INPUT
+
+while True:
+    print(not Signal.value)
+    time.sleep(0.1)
+
+https://www.loom.com/share/9824af68760d491e82b2c332001a14c4
+
+----
+
+KY-017
+
+import board
+from digitalio import *
+import time
+
+Signal = DigitalInOut(board.GP0)
+Signal.direction = Direction.INPUT
+
+while True:
+    print(not Signal.value)
+    time.sleep(0.1)
+
+https://www.loom.com/share/e97276c658734153865d769ba94531bd
+
+----
 
 
 
