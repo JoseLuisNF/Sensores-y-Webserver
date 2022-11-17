@@ -518,5 +518,12 @@ https://www.loom.com/share/90980de1fe8149afaf22aaa068a329c2
 
 ----
 
+Pico W, Webserver con 3 sensores y animación UIX
+
+https://www.loom.com/share/92766c7f9ee840d6980f195f2764e10e
+
+https://www.loom.com/share/dadf60a2f90a49ebad2fd3af25394f72
+
+
 
 
